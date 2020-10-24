@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+.HomePage {
+    display: flex;
+    justify-content: center;
+    margin-top: 35vh;
+    p {
+        color : white;
+        position: fixed;
+        top : 90%;
+    }
+    .logo {
+        width : 35vh;
+        height : 35vh;
+        display: block;
+        opacity : 1;
+        margin-right: 5vw;
+
+        svg {
+            width : 35vh;
+            height : 35vh;
+        }
+    }
+    .element {
+
+        .header {
+            opacity : 0;
+
+            .threeSquares {
+                width : 6vw;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                padding-top: 2vh;
+                margin-left : 7vw;
+                .square {
+                    width : 1.5vh;
+                    height : 1.5vh;
+                    background-color: white;
+                    display: flex;
+                    justify-self: center;
+                    justify-content: center;
+                    transform: rotate(45deg);
+                }
+            }
+    
+            h1 {
+                text-align: center;
+                color: white;
+                font-size : 3.5rem;
+                margin-bottom: 0;
+                width : 20vw;
+            }
+        }
+        .startButton {
+            width : 13vw;
+            height : 7vh;
+            font-size: 1.2rem;
+            opacity : 0;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            background-color: #47bd56;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.75s;
+            will-change: background-color;
+            margin-left : 3.5vw;
+            margin-top : 4vh;
+        }
+        .startButton:hover {
+            background-color: #168324;
+        }
+
+    }
+}
+
+@media screen and (min-width : 1650px) {
+    .HomePage {
+        display: flex;
+        justify-content: center;
+        margin-top: 35vh;
+        p {
+            color : white;
+            position: fixed;
+            top : 90%;
+            font-size : 1.75rem;
+        }
+        .element {
+            .header {
+                h1 {
+                    font-size : 5rem;
+                }
+            }
+            .startButton {
+                font-size: 1.7rem;
+                border-radius: 25px;
+                
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width : 2500px) {
+    .HomePage {
+        display: flex;
+        justify-content: center;
+        margin-top: 35vh;
+        p {
+            color : white;
+            position: fixed;
+            top : 90%;
+            font-size : 2.5rem;
+        }
+        .element {
+            .header {
+                h1 {
+                    font-size : 9rem;
+                }
+            }
+            .startButton {
+                font-size: 4rem;
+                border-radius: 50px;
+                
+            }
+        }
+    }
+    
+}
+
+@media screen and (width : 1600px) {
+    .HomePage {
+        display: flex;
+        justify-content: center;
+        margin-top: 35vh;
+        p {
+            color : white;
+            position: fixed;
+            top : 90%;
+            font-size : 1.75rem;
+        }
+        .element {
+            .header {
+                .threeSquares {
+                    width : 6vw;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    padding-top: 2vh;
+                    margin-left : 8.25vw;
+                    .square {
+                        width : 1.5vh;
+                        height : 1.5vh;
+                        background-color: white;
+                        display: flex;
+                        justify-self: center;
+                        justify-content: center;
+                        transform: rotate(45deg);
+                    }
+                }
+                h1 {
+                    font-size : 5rem;
+                }
+            }
+            .startButton {
+                font-size: 1.7rem;
+                border-radius: 25px;
+                margin-left : 4.75vw;
+            }
+        }
+    }
+}
+@media screen and (orientation : portrait) {
+    .HomePage {
+        display : grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin : 0;
+        overflow: hidden;
+        height: 100vh;
+
+        p {
+           text-align: center;
+           display: block;
+           margin : auto auto;
+           position: relative;
+           top : -100%;
+        }
+
+        .logo {
+            margin-right : 0;
+            margin : auto auto;
+        }
+
+       
+
+        .element {
+            .startButton {
+                margin : 0;
+                margin-top : 7vh;
+                width : 36vw;
+                height : 12vh;
+                margin-left : 32vw;
+                border-radius: 25px;
+                font-size : 2rem;
+            }
+            .header {
+                .threeSquares {
+                    margin : auto auto;
+                    width : 18vw;
+                }
+                h1 {
+                    margin : 0;
+                    width : 100vw;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,86 @@
+.about {
+    margin-top : 16vh;
+    justify-content: center;
+    height: 100vh;
+    width : 100vw;
+    animation : anim 0.6s;
+    h1 {
+        text-align: center;
+        color : white;
+        font-size: 2rem;
+    }
+    .navlink {
+        button {
+            font-size : 2rem;
+            width : 20vw;
+            height : 10vh;
+            margin-left : 40vw;
+            background-color: #47bd56;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            transition: 0.6s;
+            cursor: pointer;
+            margin-top : 3vh;
+        }
+        button:hover {
+            background-color: #3ce753;
+            color : white;
+        }
+    }
+}
+@keyframes anim {
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity : 1;
+    }
+}
+@media screen and (orientation : portrait) {
+    .about {
+        .navlink {
+            button {
+                width : 50vw;
+                height : 10vh;
+                margin-left : 25vw;
+            }
+        }
+    }
+}
+@media screen and (min-width : 1800px) {
+    .about {
+        h1 {
+            font-size : 3.5rem;
+        }
+        .navlink {
+            button {
+                font-size : 3rem;
+            }
+        }
+    }
+}
+@media screen and (min-width : 3200px) {
+    .about {
+        h1 {
+            font-size : 6.5rem;
+        }
+        .navlink {
+            button {
+                font-size : 6rem;
+            }
+        }
+    }
+}
+@media screen and (min-width : 2500px) {
+    .about {
+        h1 {
+            font-size : 4.5rem;
+        }
+        .navlink {
+            button {
+                font-size : 4rem;
+            }
+        }
+    }
+}

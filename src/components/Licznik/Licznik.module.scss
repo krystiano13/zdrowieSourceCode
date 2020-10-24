@@ -1,0 +1,369 @@
+.licznik{
+    .formButton{
+        position: fixed;
+        top : 0;
+        right : 0;
+        height : 6.5vh;
+        font-size : 1.2rem;
+        width: 12vw;
+    }
+    .calTitle {
+        text-align: center;
+        color : white;
+        border-bottom: solid 1px #00000098;
+        margin : 0;
+        height: 6.5vh;
+        align-items: center;
+    }
+    .form {
+        width : 30vw;
+        border : solid green 2px;
+        justify-content: center;
+        height: 53vh;
+        position: fixed;
+        margin-left : 35vw;
+        margin-top : 15vh;
+        background-color: #29b93c;
+        border-radius: 20px;
+        z-index: 999;
+        .wyszukiwarka {
+            width : 20vw;
+            margin-left : 5vw;
+            font-size : 1.2rem;
+            margin-top: 2vh;
+            border-radius: 15px;
+            border: solid 1px black;
+            text-align: center;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            width : 25vw;
+            margin : auto auto;
+            overflow-y : scroll;
+            height : 15vh;
+            transform: translateY(3vh);
+            button {
+                font-size : 1.25rem;
+            }
+        }
+        form {
+            padding-top : 5vh;
+            transform: translateY(2vh);
+            input {
+                width : 10vw;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                border: solid 1px black;
+                border-right: none;
+                font-size: 1.2rem;
+                text-align: center;
+            }
+            button {
+                width : 7vw;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border: solid 1px black;
+                font-size: 1.2rem;
+            }
+            margin-left : 6.5vw;
+        }
+        h1 {
+            font-size: 1.2rem;
+            transform: translateY(3.5vh);
+            padding-left: 1vw;
+        }
+    }
+
+    .list {
+        height : 86.5vh;
+        overflow-y: scroll;
+
+        div {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-items: center;
+           
+            h1 {
+                color : white;
+                text-align : right;
+                transform: translateX(10vw);
+                font-size: 1.75rem;
+                
+            }
+            h2 {
+                color : #29b93c;
+                text-align: left;
+                transform: translateX(-10vw);
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+    .result {
+        color : white;
+        position: fixed;
+        background-color: #29b93c;
+        width : 100vw;
+        height : 7vh;
+        text-align: center;
+        align-content: center;
+        z-index : 999;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (orientation : portrait) {
+    .licznik {
+        .formButton {
+            width : 18vw;
+            font-size : 0.8rem;
+        }
+
+        .result {
+            transform : translateY(-7vh);
+            height : 14vh;
+        }
+
+        .form {
+            width : 60vw;
+            margin-left : 20vw;
+
+            .wyszukiwarka {
+                width : 40vw;
+                margin-left : 10vw;
+                font-size: 1rem;
+            }
+            .buttons {
+                width : 54vw;
+
+                button {
+                    font-size : 1.15rem;
+                }
+            }
+            form {
+                input {
+                    width : 30vw;
+                }
+                button {
+                    width : 21vw;
+                }
+                margin-left : 4.5vw;
+            }
+            h1 {
+                font-size : 1.15rem;
+                width : 60vw;
+            }
+        }
+        .list {
+            div {     
+                h1 {
+                    font-size: 1.2rem;   
+                    transform: translateX(4vw);  
+                }
+                h2 {
+                    transform: translateX(10vw);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    
+    }
+}
+
+@media screen and (min-width : 1800px) {
+    .licznik {
+        .calTitle {
+            font-size : 3rem;
+        }
+        .result {
+            font-size: 3rem;
+        }
+        .formButton {
+            font-size: 1.8rem;
+        }
+
+        .form {
+            width : 40vw;
+            height : 55vh;
+            margin-left : 30vw;
+            margin-top : 10vh;
+            border-radius: 35px;
+
+            .wyszukiwarka {
+                width : 30vw;
+                margin-left : 5vw;
+                font-size: 2.25rem;
+            }
+            .buttons {
+                width : 30vw;
+
+                button {
+                    font-size : 2rem;
+                }
+            }
+            form {
+                input {
+                    width : 15vw;
+                    font-size: 1.8rem;
+                }
+                button {
+                    width : 10vw;
+                    font-size: 1.8rem;
+                }
+                margin-left : 7.5vw;
+            }
+            h1 {
+                font-size : 2.3rem;
+                width : 60vw;
+            }
+        }
+
+        .list {
+            div {     
+                h1 {
+                    font-size: 3rem;
+                    
+                }
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width : 2500px) {
+    .licznik {
+        .calTitle {
+            font-size : 4.5rem;
+        }
+        .result {
+            font-size: 4.5rem;
+        }
+        .formButton {
+            font-size: 2rem;
+        }
+
+        .form {
+            width : 40vw;
+            height : 55vh;
+            margin-left : 30vw;
+            margin-top : 10vh;
+            border-radius: 35px;
+
+            .wyszukiwarka {
+                width : 30vw;
+                margin-left : 5vw;
+                font-size: 2.6rem;
+            }
+            .buttons {
+                width : 30vw;
+
+                button {
+                    font-size : 2.6rem;
+                }
+            }
+            form {
+                input {
+                    width : 15vw;
+                    font-size: 2.4rem;
+                }
+                button {
+                    width : 10vw;
+                    font-size: 2.4rem;
+                }
+                margin-left : 7.5vw;
+            }
+            h1 {
+                font-size : 2.74rem;
+                width : 60vw;
+            }
+        }
+        .list {
+            div {     
+                h1 {
+                    font-size: 4rem;
+                    
+                }
+                h2 {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width : 3500px) {
+    .licznik {
+        .calTitle {
+            font-size : 6rem;
+        }
+        .result {
+            font-size: 6rem;
+        }
+        .formButton {
+            font-size: 3rem;
+        }
+
+        .form {
+            width : 40vw;
+            height : 57vh;
+            margin-left : 30vw;
+            margin-top : 10vh;
+            border-radius: 70px;
+
+            .wyszukiwarka {
+                width : 30vw;
+                margin-left : 5vw;
+                font-size: 4rem;
+                border-radius: 40px;
+            }
+            .buttons {
+                width : 30vw;
+
+                button {
+                    font-size : 4.2rem;
+                }
+            }
+            form {
+                input {
+                    width : 15vw;
+                    font-size: 4rem;
+                    border-top-left-radius: 40px;
+                    border-bottom-left-radius: 40px;
+                }
+                button {
+                    width : 10vw;
+                    font-size: 4rem;
+                    border-top-right-radius: 40px;
+                    border-bottom-right-radius: 40px;
+                }
+                margin-left : 7.5vw;
+            }
+            h1 {
+                font-size : 4.5rem;
+                width : 60vw;
+            }
+        }
+        .list {
+            div {     
+                h1 {
+                    font-size: 5.2rem;
+                    
+                }
+                h2 {
+                    font-size: 5.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 285px) {
+    .licznik {
+        .result {
+            font-size : 2rem;
+        }
+    }
+}

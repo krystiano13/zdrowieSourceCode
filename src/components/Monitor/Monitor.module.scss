@@ -1,0 +1,219 @@
+.Monitor {
+    overflow-y: hidden;
+    animation: anim 0.6s;
+    .country {
+        margin: 0;
+        text-align: center;
+        color: white;
+        transform: translateY(5vh);
+        font-size: 2.5rem;
+    }
+    .modal {
+        position: fixed;
+        transform: translateY(-92vh);
+        width : 39vw;
+        height : 80vh;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        overflow-y: scroll;
+        margin-left : 30.5vw;
+        border : solid #47bd56 0.5vh;
+        background-color: #47bd56;
+        button {
+            font-size : 1.5rem;
+            background-color: #47bd56;
+            border: none;
+            transition: 0.6s;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover {
+            background-color: #05e723;
+            color : white;
+        }
+    }
+    .choose {
+        margin : auto auto;
+        display: flex;
+        justify-content: center;
+        width : 30vw;
+        
+        button {
+            width : 12vw;
+            height : 5vh;
+            transform: translateY(3vh);
+            font-size : 1.2rem;
+            background-color: #47bd56;
+            border : none;
+            transition: 0.6s;
+            cursor: pointer;
+            border-radius: 20px;
+            outline : none;
+        }
+        button:hover {
+            background-color: #37d14b;
+            color : white;
+        }
+        .b1 {
+            transform: translate(-1vw,3vh);
+        } 
+        .b2 {
+            transform: translate(1vw,3vh);
+        }
+
+        .b1Black {
+            transform: translate(-1vw,3vh);
+            filter: grayscale(100%);
+        } 
+        .b2Black {
+            transform: translate(1vw,3vh);
+            filter: grayscale(100%);
+        }
+    }
+    
+    .data {
+        width : 70vw;
+        height : 80vh;
+        margin-left : 15vw;
+        margin-top: 10vh;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        transform: translateY(-6vh);
+        .dataElement {
+            width : 30vw;
+            height : 35vh;
+            background-color: transparent;
+            align-self: end;
+            border-radius: 20px;
+            border: solid 0.5vh #47bd56;
+            transition: 0.6s;
+            cursor: pointer;
+
+            .title {
+                color : white;
+                text-align: center;
+                font-size : 2rem;
+            }
+            .title2 {
+                color : white;
+                text-align: center;
+                font-size : 2rem;
+            }
+
+            @media screen and (orientation : portrait) {
+                .title {
+                    color : white;
+                    text-align: center;
+                    font-size : 1rem;
+                    transform: translateY(3vh);
+                }
+                .title2 {
+                    color : white;
+                    text-align: center;
+                    font-size : 1rem;
+                    transform: translateY(3vh);
+                }
+            }
+
+            .image {
+                width : 12vh;
+                height : 12.5vh;
+                background-image: url('./pixil4.png');
+                background-size: cover;
+                margin : auto auto;
+                margin-top : 1vh;
+                transform: translateY(2vh);
+            }
+            .image2 {
+                width : 12vh;
+                height : 12.5vh;
+                background-image: url('./pixil13.png');
+                background-size: 100%;
+                margin : auto auto;
+                margin-top : 1vh;
+                transform: translateY(2vh);
+            }
+        }
+        .dataElement:hover {
+            background-color: #47bd56;
+        }
+    }
+    .dataBlack {
+        @extend .data;
+        filter : grayscale(100%);
+    }
+}
+
+@media screen and (min-width : 2500px) {
+    .Monitor {
+        .country {
+            font-size : 5rem;
+        }
+        .choose {
+            button {
+                font-size : 3.75rem;
+            }
+        }
+        .modal {
+            button {
+                font-size : 3.25rem;
+            }
+        }
+
+        .data {
+            .title {
+                font-size : 5rem;
+                margin-top : 5vh;
+            }
+            .title2 {
+                font-size : 5rem;
+            }
+        }
+    }
+}
+
+@media screen and (orientation : portrait) {
+    .Monitor {
+        .country {
+            font-size : 1.5rem;
+        }
+        .modal {
+            width : 50vw;
+            margin-left : 25vw;
+        }
+        .choose {
+            width : 65vw;
+            button {
+                font-size : 1.15rem;
+                width : 55vw;
+            }
+        }
+        .data {
+            width : 80vw;
+            margin-left : 10vw;
+            font-size : 0.8rem;
+
+            .dataElement {
+                .title1{
+                    font-size : 0.8rem;
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes anim {
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+

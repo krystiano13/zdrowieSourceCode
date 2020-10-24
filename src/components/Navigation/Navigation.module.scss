@@ -1,0 +1,260 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top : 3vh;
+    .Nav {
+        width : 35vw;
+        transform: translateX(-5vw);
+        text-decoration: none;
+        .link {
+            text-decoration: none;
+            animation: anim 0.6s;
+            .el {
+                width : 35vw;
+                height : 45vh;
+                padding : 0;
+                background-color: transparent;
+                border-radius: 20px;
+                border: solid 0.5vh #47bd56;
+                box-sizing: border-box;
+                transition: 0.7s;
+                animation: anim 0.6s;
+
+                .image1 {
+                    width : 20vw;
+                    height : 40vh;
+                    margin-left: 7.5vw;
+                    background-image: url('./pixil-frame-06.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    transform: translateY(-1vh);
+                }
+                .title {
+                    text-align: center;
+                    text-decoration: none;
+                    color :#47bd56;
+                    transition: 0.7s;
+                    font-size : 2rem;
+                    transform: translateY(-8vh);
+                }
+            }   
+
+            .el:hover {
+                transform: scale(1.05);
+                background-color: #47bd56;
+                .title {
+                    color : white;
+                }
+            }
+        }
+    }
+    .Nav2 {
+        @extend .Nav;
+        transform: translateX(5vw);
+        .el {
+            .image2 {
+                width : 20vw;
+                height : 40vh;
+                margin-left: 7.5vw;
+                background-image: url('./pixil-frame-05.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                transform: translateY(-6vh);
+            }
+        }
+    }
+}
+.wrapper2 {
+    @extend .wrapper;
+    .Nav3 {
+        @extend .Nav;
+        .link {
+            .el {
+                .image1 {
+                    background-image: url('./pixil-frame435.png');
+                    transform: scale(0.85);
+                }
+            }
+        }
+    }
+    .Nav4 {
+        @extend .Nav2;
+        .link {
+            .el {
+                .image2 {
+                    background-image: url('./pixil-frame-02.png');
+                    transform: scale(0.85);
+                }
+            }
+        }
+    }
+}
+@media screen and (orientation : portrait) {
+    body {
+        overflow-y: scroll;
+    }
+}
+@media screen and (orientation : portrait) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap : 1vh;
+        margin : 0;
+
+        .Nav {
+            transform: translateX(0);
+            margin-left : 10vw;
+            .link {
+                
+                .el {
+                    transform: translateY(2vh);
+                    width : 80vw;
+                    height: 45vh;
+                    .image1 {
+                        width : 72vw;
+                        margin : auto auto;
+                        transform : translateY(0);
+                    }
+                    .title {
+                        transform: translateY(-8vh);
+                    }
+                }
+            }
+        }
+        .Nav2 {
+            transform: translateY(5vh);
+            .link {
+                .el {
+                    .image2 {
+                        width : 70vw;
+                        margin : auto auto;
+                        transform : translateY(-4vh);
+                    }
+                }
+            }
+            
+        }
+    }
+    .wrapper2 {
+        margin-top : 10vh;
+
+        .Nav4 {
+            .link {
+                .el {
+                    .image2 {
+                      transform: translateY(-1vh);
+                    }
+                }
+            }
+        }
+        .Nav3 {
+            .link {
+                .el {
+                    .image1 {
+                      transform: translateY(-2vh);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+@media screen and (width : 375px) {
+    .wrapper {
+        .Nav {
+            margin-left : 3vw;
+            .link {
+                .el {
+                    width : 94vw;
+                    .image1 {
+                        width : 88vw;
+                    }
+                }
+            }
+        }
+        .Nav2 {
+            .link {
+                .el {
+                    .image2 {
+                        width : 88vw;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width : 1440px) {
+    .wrapper {
+        .Nav {
+            width : 40vw;
+            .link {
+                .el {
+                    width : 40vw;
+                    .image1 {
+                        width : 25vw;
+                    }
+                    .title {
+                        font-size : 3rem;
+                    }
+                }
+            }
+        }
+        .Nav2 {
+            .link {
+                .el {
+                    width : 40vw;
+                    .image2 {
+                        width : 25vw;
+                    }
+                    .title {
+                        font-size : 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width : 2500px) {
+    .wrapper {
+        .Nav {
+            width : 40vw;
+            .link {
+                .el {
+                    width : 40vw;
+                    .image1 {
+                        width : 20vw;
+                        margin-left: 10vw;
+                    }
+                    .title {
+                        font-size : 5rem;
+                    }
+                }
+            }
+        }
+        .Nav2 {
+            .link {
+                .el {
+                    width : 40vw;
+                    .image2 {
+                        width : 20vw;
+                        margin-left: 10vw;
+                    }
+                    .title {
+                        font-size : 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes anim {
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
